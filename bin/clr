@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Clear terminal and scrollback buffer in compatible terminals
+clear && printf '\e[3J'

@@ -1,0 +1,20 @@
+{
+  "roadmap": [],
+  "principles": [
+    { "id": "p1", "title": "Keep code modular, readable and privacy-minded.", "body": "", "tags": ["modularity","privacy","coding"] },
+    { "id": "p2", "title": "Prefer minimal, well-documented changes and PRs for traceability.", "body": "", "tags": ["process","review"] },
+    { "id": "p3", "title": "Use environment variables for secrets (see .env.example).", "body": "", "tags": ["security","env"] },
+    { "id": "p4", "title": "Prefer Tailwind utilities for styling; keep global CSS limited to base rules.", "body": "", "tags": ["styling","tailwind"] },
+    { "id": "p5", "title": "Always try the simplest solution first.", "body": "If you need to fix CSS, check or adjust Tailwind style attributes before stacking custom CSS rules.", "tags": ["simplicity","css"] },
+    { "id": "p6", "title": "Keep languages grouped properly.", "body": "Global CSS in main CSS file, JS in JS files; avoid inline CSS/JS unless required.", "tags": ["organization","hygiene"] }
+  ],
+  "guidelines": [
+    { "id": "g1", "title": "Code, variable names and comments are in English.", "body": "", "tags": ["coding","language"] },
+    { "id": "g2", "title": "The user interface (labels, buttons, messages, errors, etc.) is in French.", "body": "", "tags": ["ui","i18n"] },
+    { "id": "g3", "title": "Keep answers and comments concise and precise.", "body": "", "tags": ["communication","terse"] },
+    { "id": "g4", "title": "Always respect the project’s modular architecture and privacy-by-design approach.", "body": "", "tags": ["architecture","privacy"] },
+    { "id": "g5", "title": "Maintain consistency between documentation, file structure and code conventions.", "body": "", "tags": ["consistency","docs"] }
+  ]
+  ,
+  "completed": []
+}

@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Using string fields instead of enums for SQLite compatibility.
+// We'll enforce allowed values at the application level (Zod / checks).
+
+model User {
+  id           String   @id @default(cuid())
+  name         String?
+  email        String   @unique
+  passwordHash String
+  // role stored as string for SQLite; enforce values in application logic
+  role         String   @default("citizen")
+  claims       Claim[]  @relation("author_claims")
+  validations  ExpertValidation[]
+  votes        Vote[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Claim {
+  id          String            @id @default(cuid())
+  title       String
+  description String
+  // status stored as string; values: pending | under_review | accepted | rejected
+  status      String            @default("pending")
+  domain      String?
+  authorId    String
+  author      User              @relation(fields: [authorId], references: [id], name: "author_claims")
+  validations ExpertValidation[]
+  votes       Vote[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model ExpertValidation {
+  id         String   @id @default(cuid())
+  claimId    String
+  claim      Claim    @relation(fields: [claimId], references: [id])
+  expertId   String
+  expert     User     @relation(fields: [expertId], references: [id])
+  opinion    String?
+  status     String?
+  justification String?
+  createdAt  DateTime @default(now())
+}
+
+model Vote {
+  id        String     @id @default(cuid())
+  claimId   String
+  claim     Claim      @relation(fields: [claimId], references: [id])
+  voterId   String
+  voter     User       @relation(fields: [voterId], references: [id])
+  // choice stored as string; values: yes | no | abstain
+  choice    String
+  createdAt DateTime   @default(now())
+}

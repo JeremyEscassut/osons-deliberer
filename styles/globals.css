@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base typographic rules for French UI */
+:root{
+  --content-width: 880px;
+}
+
+html,body,#root{height:100%;}
+body{
+  @apply bg-neutral-50 text-neutral-800 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height:1.5;
+}
+
+/* Card component base */
+.card{
+  @apply bg-white rounded-card shadow-sm p-4;
+}
+
+.container{
+  max-width:var(--content-width);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:1rem;
+  padding-right:1rem;
+}
