@@ -21,21 +21,6 @@ npm run build
 
 Keep this file updated with recurring commands and troubleshooting notes.
 
-Project-local clear (clr)
--------------------------
-We provide a small executable at `./bin/clr` that clears the terminal and the scrollback buffer.
+# Clear console
+clr
 
-Use it directly:
-
-```bash
-./bin/clr
-```
-
-Or add the project `bin` to your PATH for convenience (per-shell):
-
-```bash
-export PATH="$PWD/bin:$PATH"
-clr   # now works
-```
-
-To make it permanent for this project, add the export line to your `~/.bashrc` or source `./bin/clr` as you prefer.

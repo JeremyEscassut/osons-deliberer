@@ -76,25 +76,6 @@ Later: Audit, Document, AI tagging tables.
 
 ---
 
-<!-- PRINCIPLES:START -->
-## Development principles
--   Keep code modular, readable and privacy-minded.
--   Prefer minimal, well-documented changes and PRs for traceability.
--   Use environment variables for secrets (see .env.example).
--   Prefer Tailwind utilities for styling; keep global CSS limited to base rules.
--   Always try the simplest solution first. If you need to fix CSS, check or adjust Tailwind style attributes before stacking custom CSS rules.
--   Keep languages grouped properly: global CSS in the main CSS file, JS in JS files, etc. Avoid inline CSS or JS in HTML unless required for proper behavior.
-<!-- PRINCIPLES:END -->
-
-<!-- GUIDELINES:START -->
-## General guidelines
--   Code, variable names and comments are in English.
--   The user interface (labels, buttons, messages, errors, etc.) is in French.
--   Keep answers and comments concise and precise.
--   Always respect the project’s modular architecture and privacy-by-design approach.
--   Maintain consistency between documentation, file structure and code conventions.
-<!-- GUIDELINES:END -->
-
 Notes:
 - This file is a living document. Update the roadmap items as tasks complete.
 - See `README_Solutions.md` for a log of major problems and their validated solutions.
