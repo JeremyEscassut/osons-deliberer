@@ -44,6 +44,7 @@
 - **Terminal Commands:**
     - **Transparency:** State **Action**, **Impact**, and **Goal** before providing commands.
     - **Destructive Actions:** Must be explicitly marked with a **WARNING**.
+- **Command Formatting:** Commands must never contain inline comments or explanatory text inside code blocks. If you need to explain a command, place the explanation as plain text immediately before or after the code block.
 - **Task Tracking:**
     - Suggest entries for `README_Solutions.md` after resolving complex bugs.
     - Update the roadmap in `README_Guidebook.md` once tasks are completed.
